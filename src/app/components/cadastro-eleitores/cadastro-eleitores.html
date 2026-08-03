@@ -9,8 +9,20 @@
 
         <div id="div-btns">
             <button type="button" id="btn-add" (click)="addEleitor()">Adicionar</button>
-            <button type="button" id="limpar" (click)="limparTudo">Limpar</button>
+            <button type="button" id="limpar" (click)="limparTudo()">Limpar</button>
         </div>
 
     </form>
+
+    <div id="div-lista">
+        @for(elem of listaEleitores; track elem.idEleitor){
+            <div class="div-eleitor">
+
+                {{elem.idEleitor}}- Nº {{elem.numEleitor}} | {{cidade}}
+
+            </div>
+        }@empty{
+            <div class="div-item"> Nenhum eleitor na lista </div>
+        }
+    </div>
 </div>
