@@ -1,1 +1,16 @@
-<p>cadastro-eleitores works!</p>
+<div id="vid-form">
+    <h3>LISTA CIDADES E ELEITORES</h3>
+    <form id="formulario">
+        <label for="numero-eleitor">Número de eleitor: </label>
+        <input type="text" name="numero-eleitor" id="numero-eleitor" [(ngModel)]="numEleitor">
+
+        <label for="cidade">Cidade: </label>
+        <input type="text" name="cidade" id="cidade" [(ngModel)]="cidade">
+
+        <div id="div-btns">
+            <button type="button" id="btn-add" (click)="addEleitor()">Adicionar</button>
+            <button type="button" id="limpar" (click)="limparTudo">Limpar</button>
+        </div>
+
+    </form>
+</div>
