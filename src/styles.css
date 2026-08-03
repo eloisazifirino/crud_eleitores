@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+:root{
+    --bg: #F6F3FF;            /* Fundo da página */
+    --surface: #FFFFFF;       /* Cards/divs */
+    --primary: #6D28D9;       /* Roxo principal */
+    --primary-hover: #5B21B6; /* Hover dos botões */
+    --secondary: #A78BFA;     /* Roxo claro */
+    --border: #DDD6FE;        /* Bordas */
+    --text: #2E1065;          /* Texto principal */
+    --text-light: #6B7280;    /* Texto secundário */
+    --success: #10B981;       /* Opcional */
+    --danger: #EF4444;        /* Opcional */
+}
