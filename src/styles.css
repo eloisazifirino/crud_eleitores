@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Roboto Condensed", sans-serif;
 }
@@ -19,4 +19,16 @@
     --text-light: #6B7280;    /* Texto secundário */
     --success: #10B981;       /* Opcional */
     --danger: #EF4444;        /* Opcional */
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px 16px;
+    color: var(--text);
+    background: var(--bg);
+}
+
+button,
+input {
+    font: inherit;
 }

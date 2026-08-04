@@ -1,0 +1,102 @@
+#vid-form {
+    width: min(100%, 520px);
+    margin: 0 auto;
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgb(46 16 101 / 10%);
+}
+
+h3 {
+    margin-bottom: 24px;
+    color: var(--primary);
+    text-align: center;
+}
+
+#formulario {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 10px 12px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgb(109 40 217 / 15%);
+}
+
+#div-btns {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+button {
+    flex: 1;
+    padding: 10px 16px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    background: var(--primary);
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+#limpar {
+    color: var(--primary);
+    background: var(--border);
+}
+
+#limpar:hover {
+    background: var(--secondary);
+}
+
+#div-lista {
+    display: grid;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.div-eleitor,
+.div-item {
+    padding: 12px;
+    border-left: 4px solid var(--primary);
+    border-radius: 6px;
+    background: var(--bg);
+}
+
+.div-item {
+    color: var(--text-light);
+    text-align: center;
+    border-left-color: var(--secondary);
+}
+
+@media (max-width: 480px) {
+    #vid-form {
+        padding: 20px;
+    }
+
+    #div-btns {
+        flex-direction: column;
+    }
+}
