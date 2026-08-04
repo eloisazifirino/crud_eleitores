@@ -1,6 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importa a fonte usada em todos os elementos da aplicação. */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Reset básico para remover espaços padrão e tornar o cálculo de tamanhos previsível. */
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +9,8 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
+/* Variáveis globais da paleta. Usar variáveis evita repetir cores e facilita
+   trocar todo o tema da aplicação em um único lugar. */
 :root{
     --bg: #F6F3FF;            /* Fundo da página */
     --surface: #FFFFFF;       /* Cards/divs */
@@ -21,6 +24,7 @@
     --danger: #EF4444;        /* Opcional */
 }
 
+/* Define o fundo, o texto e o espaçamento geral da página. */
 body {
     min-height: 100vh;
     padding: 40px 16px;
@@ -28,6 +32,7 @@ body {
     background: var(--bg);
 }
 
+/* Faz campos e botões herdarem a mesma fonte definida no reset global. */
 button,
 input {
     font: inherit;

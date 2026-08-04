@@ -1,24 +1,37 @@
+<!-- Card que agrupa o formulário e a lista de eleitores. -->
 <div id="vid-form">
     <h3>LISTA CIDADES E ELEITORES</h3>
+
+    <!-- O formulário apenas organiza os campos. Os botões usam type="button"
+         para evitar o envio tradicional da página e manter o controle no Angular. -->
     <form id="formulario">
         <label for="numero-eleitor">Número de eleitor: </label>
+        <!-- [(ngModel)] cria uma ligação bidirecional: o valor digitado atualiza
+             numEleitor e mudanças em numEleitor também atualizam este input. -->
         <input type="text" name="numero-eleitor" id="numero-eleitor" [(ngModel)]="numEleitor">
 
         <label for="cidade">Cidade: </label>
+        <!-- O mesmo tipo de ligação mantém o campo sincronizado com cidade. -->
         <input type="text" name="cidade" id="cidade" [(ngModel)]="cidade">
 
         <div id="div-btns">
+            <!-- Event binding: cada clique chama o método correspondente no componente. -->
             <button type="button" id="btn-add" (click)="addEleitor()">Adicionar</button>
             <button type="button" id="limpar" (click)="limparTudo()">Limpar</button>
         </div>
     </form>
 
+    <!-- Área atualizada automaticamente sempre que listaEleitores é alterada. -->
     <div id="div-lista">
+        <!-- @for percorre o array e cria uma div para cada eleitor.
+             track usa o id para o Angular identificar cada item com eficiência. -->
         @for(elem of listaEleitores; track elem.idEleitor){
             <div class="div-eleitor">
+                <!-- Interpolação: exibe no HTML os dados do objeto atual do laço. -->
                 {{elem.idEleitor}} - Nº {{elem.numEleitor}} | {{elem.cidade}}
             </div>
         }@empty{
+            <!-- @empty aparece somente enquanto o array não possui elementos. -->
             <div class="div-item"> Nenhum eleitor na lista </div>
         }
     </div>
