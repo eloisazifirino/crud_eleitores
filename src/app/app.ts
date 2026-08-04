@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CadastroEleitores } from './components/cadastro-eleitores/cadastro-eleitores';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CadastroEleitores],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('crud_eleitores');
-}
+export class App {}
